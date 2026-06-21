@@ -299,6 +299,7 @@ footer {
 
 /* MEDIA QUERIES - BIKIN RESPONSIVE DI MOBILE / HP */
 @media (max-width: 768px) {
+    /* 1. Modif navigasi biar bisa di-swipe ke samping kayak aplikasi modern */
     nav {
         flex-direction: column;
         padding: 15px 20px;
@@ -307,9 +308,34 @@ footer {
     }
     
     nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+        display: flex;
+        flex-wrap: nowrap; /* Mencegah menu turun ke baris bawah */
+        overflow-x: auto;  /* Mengaktifkan fitur geser/swipe */
+        justify-content: flex-start;
+        padding-bottom: 5px; /* Spasi biar gak mepet pinggir */
+        gap: 20px;
+        
+        /* Menyembunyikan scrollbar bawaan browser biar estetik */
+        -ms-overflow-style: none;  
+        scrollbar-width: none;  
+    }
+
+    nav ul::-webkit-scrollbar {
+        display: none; 
+    }
+
+    /* 2. Benerin posisi foto biar di atas teks */
+    .about-container {
+        flex-direction: column; /* Mengubah jalur jadi lurus dari atas ke bawah */
+        flex-wrap: nowrap; /* Membatalkan efek wrap-reverse sebelumnya */
+        gap: 30px;
+        padding-top: 0;
+    }
+
+    /* Dikecilin dikit fotonya biar lebih proporsional buat layar HP */
+    .about-image {
+        width: 220px; 
+        height: 220px;
     }
 
     .about-text h1 {
@@ -332,8 +358,15 @@ footer {
     .card {
         padding: 25px;
     }
+    
+    /* Penyesuaian tombol floating CV buat HP */
+    .floating-cv {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
 }
-
 /* =========================================
    MODAL / POPUP STYLE (UI MODERN)
    ========================================= */
