@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rido Aditya A. | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h3>Rido Aditya</h3>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#organization">Organization</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="about" class="section">
+        <div class="about-container">
+            <!-- Nanti ganti link gambarnya pake foto asli lu yang paling keren bro -->
+            <img src="Foto_Profile.jpeg" alt="Rido Aditya" class="about-image">
+            <div class="about-text">
+                <h1>Hi, I'm <span class="highlight">Rido Aditya</span></h1>
+                <h3><span class="typing-text" id="typewriter"></span></h3>
+                <p>Focused on the industrial and automation sectors, specifically in PLC & IoT, yet not limited to the technical aspects. Actively developing business ideas, articulating concepts, and designing relevant solutions for the challenges of the digital era. I believe the future is shaped not only by technology, but by the courage to think differently and take concrete action.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- [Bagian Experience, Organization, Projects, Skills, dan Education sama persis kayak sebelumnya, gak gw ubah] -->
+    <section id="experience" class="section">
+        <h2><span class="highlight">#</span> Work Experience</h2>
+        <div class="card">
+            <h3>Officer Process Engineering - PT GS BATTERY</h3>
+            <span>July 2025 - Agustus 2026 | Karawang</span>
+            <ul>
+                <li>Eliminating the risk of lead overflow in the MLR area by developing an emergency UPS system using GS MF Spectra batteries.</li>
+                <li>Reduce cycle time on the COS AMB Assy line 5 machine from 23 seconds to 18 seconds by developing a water chiller system.</li>
+                <li>Reduce the rejection of leaking pole batteries by 90% in line 7 MCB VRLA ASSY by designing an automatic pole cover system.</li>
+                <li>Reduced process variance in the Pasting department by 11.66% by designing a high-accuracy automated counting system.</li>
+                <li>Developed a real-time data logging system for Polarity Testers using Python and Node-RED.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Internship Engineering Assembly - PT AKEBONO BRAKE ASTRA INDONESIA</h3>
+            <span>January 2025 - Juni 2025 | Jakarta Utara</span>
+            <ul>
+                <li>Support Engineering Team to first winner in G-QCC Mitsubishi Supplier Club (MSC) 2025.</li>
+                <li>Develop a Tightening Bleeder Machine Project and Packing Grease Machine.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Internship Engineering - PADJAJARAN SUITE RESORT & CONVENTION HOTEL</h3>
+            <span>January - May 2020 | Bogor</span>
+            <ul>
+                <li>Maintenance, repair, and installation of electrical components such as lights, water pumps, and panels.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="organization" class="section">
+        <h2><span class="highlight">#</span> Organizational Experience</h2>
+        <div class="card">
+            <h3>ASTRA POLYTECHNIC</h3>
+            <ul>
+                <li><strong>Programmer Coordinator for the Robotics Student Association (Feb 2024 - Feb 2025):</strong> Preparing program flow and developing programs for planned projects.</li>
+                <li><strong>Workshop Instructor for PTC Creo 5 Design (Mar 2024):</strong> Delivered fundamental design materials including creation, assembly, and animation.</li>
+                <li><strong>Secretariate for the Robotics Student Association (Jan - Nov 2023):</strong> Developed Activity Plans, created letters, and proposals.</li>
+                <li><strong>Committee Member for Submarine Competition (Oct 2023):</strong> Created rules, designed questions, and supervised the competition.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>SMK NEGERI 2 BOGOR</h3>
+            <ul>
+                <li><strong>Vice Chairman of the OSIS (Dec 2020 - Dec 2021):</strong> Managed the team, planned event concepts, and supervised objectives.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2><span class="highlight">#</span> Projects Experience</h2>
+        <div class="carousel-container" id="project-carousel">
+            <!-- Tambahin class project-card dan onclick di tiap div card -->
+            <div class="card project-card" onclick="openModal('Thermal Imaging', 'Made thermal camera with mlx90640 sensor and LCD TFT SPI. Made PCB and 3D Design for Hardware.', '1_Thermal_Imaging.JPG')">
+                <img src="1_Thermal_Imaging.JPG" alt="Thermal Imaging" class="project-img">
+                <h3>Thermal Imaging</h3>
+                <p>Made thermal camera with mlx90640 sensor...</p>
+            </div>
+            <div class="card project-card" onclick="openModal('Elysium - Smart Home', 'Made concept, prototype, and wiring for smart home automation. Made simple machine learning for face detection. Programmed using C#, Node-Red, and Python with Influx DB.', '2_Elysium.JPG')">
+                <img src="2_Elysium.JPG" alt="Elysium Smart Home" class="project-img">
+                <h3>Elysium - Smart Home</h3>
+                <p>Integrated with IoT and AI for face detection...</p>
+            </div>
+            <div class="card project-card" onclick="openModal('SecureTrack Box', 'Made concept and 3D design to monitor the box for shocks, theft, and real-time tracking. Designed using Creo Parametric 5.', '3_SecureTrack_Box.JPG')">
+                <img src="3_SecureTrack_Box.JPG" alt="SecureTrack Box" class="project-img">
+                <h3>SecureTrack Box</h3>
+                <p>The box for safety delivering. Made concept and 3D design...</p>
+            </div>
+            <div class="card project-card" onclick="openModal('Broiler Plus', 'Made concept, prototype, and wiring for an automation system for broiler. Made UI/UX for Android application and simple machine learning for broiler detection.', '4_BroilerPlus.jpeg')">
+                <img src="4_BroilerPlus.jpeg" alt="Broiler Plus" class="project-img">
+                <h3>Broiler Plus</h3>
+                <p>Automation system for broiler detection using machine learning...</p>
+            </div>
+            <div class="card project-card" onclick="openModal('InTernak', 'Made concept, prototype, and wiring for an automation system for cow and goat barns. Programmed using C# Arduino IDE, Android Studio (Java), and Python.', '5_InTernak.jpg')">
+                <img src="5_InTernak.jpg" alt="InTernak" class="project-img">
+                <h3>InTernak</h3>
+                <p>Automation system for cow and goat barns with machine learning...</p>
+            </div>
+            <div class="card project-card" onclick="openModal('Elaeis Automatic', 'Autonomous vehicle designed for palm oil industry. Made concept and 3D design for Autonomous Vehicle using Creo Parametric 5.', '6_Elaeis_Automatic.JPG')">
+                <img src="6_Elaeis_Automatic.JPG" alt="Elaeis Automatic" class="project-img">
+                <h3>Elaeis Automatic</h3>
+                <p>Autonomous vehicle designed for palm oil industry...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <h2><span class="highlight">#</span> Skills & Extra Info</h2>
+        <div class="card">
+            <h3>Tech & Software Skills</h3>
+            <div class="skill-tags">
+                <span class="skill-tag">Node-Red</span>
+                <span class="skill-tag">MQTT</span>
+                <span class="skill-tag">InfluxDB</span>
+                <span class="skill-tag">PLC (Omron, Schneider, Mitsubishi)</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Creo Parametric</span>
+                <span class="skill-tag">Inventor</span>
+                <span class="skill-tag">AutoCAD</span>              
+                <span class="skill-tag">PCB Design</span>
+                <span class="skill-tag">Team Work</span>
+                <span class="skill-tag">Fast Learner</span>
+                <span class="skill-tag">Problem Solving</span>
+                <span class="skill-tag">Crtical & Deep Thingking</span>
+            </div>
+        </div>
+        <div class="card">
+            <h3>Top Awards</h3>
+            <ul>
+                <li>2nd Place in United Tractors Digital Hackathon Project 2025</li>
+                <li>2nd Place Winner, Gold Award, Best Team, and Best Idea of Essay Competition Global Innovation Sprint 2025</li>
+                <li>1st Place in the Business Model Canvas (BMC) Competition 2025</li>
+                <li>1st Place in the Case Study Category Astravate, Astra Polytechnic 2024</li>
+                <li>2nd Place in NOVASTECH at Astra Polytechnic, PKM-KC 2024</li>
+                <li>1st Place in United Tractors Digital Hackathon Project 2024</li>
+                <li>1st Place in Essay Competition POMAF, Astra Polytechnic 2024</li>
+                <li>Gold Award Virtual Competition of Creative and Innovative Ideas (VICCI) 2024</li>
+                <li>Silver Award and Reliability Global Youth Innovation Competition (GYIC) 2024</li>
+                <li>2nd Place in Scientific Writing of Agriculture Competition 2024</li>
+                <li>2nd Favourite Winner of Salman Techno Fest 2024</li>
+                <li>Recipient of PKM-VGK 2024 Funding</li>
+                <li>1st Place in NOVASTECH at Astra Polytechnic, Gemastik 2023</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Training & Courses</h3>
+            <ul>
+                <li>Advanced PowerPoint Masterclass for Professionals - Udemy Course 2025</li> 
+                <li>Super Way to Learn Arduino - Udemy Course 2025</li>
+                <li>PLC Mitsubishi Q-Series Basic to Intermediate using Gx-Works2 and Gt-Designer, Engineering EDU 2025</li>
+                <li>PLC Mitsubishi Programming and Implementation Training: Automation of Controller Panels in the Industrial World, Microtech Academy 2025</li>
+                <li>Equipment Maintenance Scheme Level 3 Training Participants, Astra Polytechnic 2024</li>
+                <li>Mastering Microcontrollers and Basic Programming with Arduino Workshop, Creative Station 2023</li>
+                <li>Basic Military Training for Students, Astra Polytechnic, 2023</li>
+                <li>HTML Advance Certification Course, Programming Hub 2021</li>     
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Additional Information</h3>
+            <ul>
+                <li>Top 15 Semifinalist of PLC Competition Tech Enthusiast Day (TED), Universitas Gadjah Mada 2024</li>
+                <li>Top 15 Semifinalist of Workshop Electro PLC Competition (WEPC), Politeknik Negeri Malang 2024</li>
+                <li>Top 15 Semifinalist National PLC Competition SEVENT, Politeknik Negeri Sriwijaya 2024</li>
+                <li>Top 20 Semifinalist E-TIME PLC Competition, Politeknik Negeri Jakarta 2024</li>
+                <li>Top 10 Semifinalist in Astranauts 2024 Innovation Competition category, with over 900+ pitch decks</li>
+                <li>Participant in Essay Competition Pertamina Goes to Campus 2024</li>
+                <li>Member of EXPO IoT Competition, Politeknik Negeri Semarang 2024</li>
+                <li>Semifinalist in Science Project and Innovation 2024 at Institut Teknologi Surabaya in the Scientific Paper</li>        
+            </ul>
+        </div>
+    </section>
+    <section id="education" class="section">
+        <h2><span class="highlight">#</span> Education</h2>
+        <div class="card">
+            <h3>Bina Nusantara, Online</h3>
+            <p>Bachelor degree - Industrial Engineering | Juni 2026 - Present</p>
+        </div>
+        <div class="card">
+            <h3>Astra Polytechnic</h3>
+            <p>Diploma 3 - Mechatronics (IPK 3.92) | Sept 2022 - Oct 2025</p>
+        </div>
+        <div class="card">
+            <h3>SMK Negeri 2 Bogor</h3>
+            <p>Electrical Engineering - Best Student | July 2019 - July 2022</p>
+        </div>
+    </section>
+
+<!-- ==========================================
+         SECTION LIFE OUTSIDE ENGINEERING (GALLERY)
+         ========================================== -->
+         <section id="gallery" class="section">
+            <h2>Life Outside Engineering</h2>
+            <div class="carousel-container" id="gallery-carousel">
+                
+                <!-- Card 1: Curug Cikawah -->
+                <div class="card project-card" onclick="openModal('Curug Cikawah', 'Trekking to Curug Cikawah builds physical endurance and mental toughness. Experiencing natures raw energy is the best reset button for an analytical mind.', '1_Curug Cikawah.jpeg')">
+                    <img src="1_Curug Cikawah.jpeg" alt="Curug Cikawah" class="project-img gallery-img">
+                    <h3>Curug Cikawah</h3>
+                    <span>Endurance & Mental Toughness</span>
+                </div>
+                
+                <!-- Card 2: Curug Kembar -->
+                <div class="card project-card" onclick="openModal('Curug Kembar', 'Finding balance and tranquility at Curug Kembar. A reminder that sometimes, unplugging from the digital world is necessary to recharge our own internal batteries.', '2_Curug Kembar.jpeg')">
+                    <img src="2_Curug Kembar.jpeg" alt="Curug Kembar" class="project-img gallery-img">
+                    <h3>Curug Kembar</h3>
+                    <span>Balance & Tranquility</span>
+                </div>
+                
+                <!-- Card 3: Gede Mountain -->
+                <div class="card project-card" onclick="openModal('Gede Mountain', 'Conquering the peak of Mt. Gede. Mountain trekking is about consistent steps, strategic planning, and a pantang menyerah attitude to reach the summit.', '3_Gede Mountain.jpeg')">
+                    <img src="3_Gede Mountain.jpeg" alt="Gede Mountain" class="project-img gallery-img">
+                    <h3>Gede Mountain</h3>
+                    <span>Consistency & Persistence</span>
+                </div>
+    
+                <!-- Card 4: Kawah Ratu -->
+                <div class="card project-card" onclick="openModal('Kawah Ratu', 'Exploring the volcanic terrain of Kawah Ratu. Navigating challenging paths sharpens focus, precision, and adaptability to dynamic environments.', '4_Kawah Ratu.jpeg')">
+                    <img src="4_Kawah Ratu.jpeg" alt="Kawah Ratu" class="project-img gallery-img">
+                    <h3>Kawah Ratu</h3>
+                    <span>Focus & Adaptability</span>
+                </div>
+    
+                <!-- Card 5: Goa Langir Beach -->
+                <div class="card project-card" onclick="openModal('Goa Langir Beach', 'Relaxing and finding inspiration at Goa Langir Beach. The ocean offers a perfect space to strategize future goals and maintain a healthy life balance.', '5_Goa Langir Beach.jpeg')">
+                    <img src="5_Goa Langir Beach.jpeg" alt="Goa Langir Beach" class="project-img gallery-img">
+                    <h3>Goa Langir Beach</h3>
+                    <span>Inspiration & Strategy</span>
+                </div>
+    
+            </div>
+        </section>
+
+    <section id="contact" class="section">
+        <h2><span class="highlight">#</span> Contact Me</h2>
+        <div class="card contact-card">
+            <h3>Let's Collaborate!</h3>
+            <p>Ready to build the future of automation? Reach out through any of these channels:</p>
+            <div style="margin-top: 25px;">
+                <a href="https://wa.me/6282112340571" target="_blank" class="contact-link">WhatsApp Me</a>
+                <a href="mailto:ridoadityaauritama@gmail.com" class="contact-link">Email Me</a>
+                <a href="https://www.linkedin.com/in/ridoaditya" target="_blank" class="contact-link">LinkedIn Profile</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modal-img" src="" alt="Project Image">
+            <h2 id="modal-title">Judul Projek</h2>
+            <p id="modal-desc">Deskripsi projek akan muncul di sini.</p>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         FLOATING DOWNLOAD CV BUTTON
+         ========================================== -->
+    <a href="CV_Rido Aditya Auritama_[31-05-26].pdf" download class="floating-cv" title="Download My CV">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; vertical-align: middle;">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Download CV
+    </a>
+
+    <footer>
+        <p>Contact: ridoadityaauritama@gmail.com | Bogor, Indonesia</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
